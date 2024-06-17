@@ -12,7 +12,7 @@ import { getImages } from './js/pixabay-api';
 const refs = {
   imageSearchForm: document.querySelector('.search-form'),
   imageSearchInput: document.querySelector('.search-input'),
-  submitButton: document.querySelector('.search-btn'),
+  searchButton: document.querySelector('.search-btn'),
   imageList: document.querySelector('.images-list'),
   loader: document.querySelector('.loader'),
 };

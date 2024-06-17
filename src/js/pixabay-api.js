@@ -3,7 +3,7 @@
 const refs = {
   imageSearchForm: document.querySelector('.search-form'),
   imageSearchInput: document.querySelector('.search-input'),
-  submitButton: document.querySelector('.search-btn'),
+  searchButton: document.querySelector('.search-btn'),
   imageList: document.querySelector('.images-list'),
 };
 
@@ -22,17 +22,6 @@ export function getImages(request) {
 
   const url = `${BASE_URL}${END_POINT}?${PARAMS}`;
   console.log(url);
-
-  const options = {
-    headers: {
-      'Access-Control-Allow-Origin': '*',
-      'Content - Type': 'application/json',
-
-      'X-RateLimit-Limit': '100',
-      'X-RateLimit-Remaining': '99',
-      'X-RateLimit-Reset': '0.6',
-    },
-  };
 
   return fetch(url).then(res => {
     if (res.ok) {
